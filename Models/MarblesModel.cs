@@ -48,5 +48,10 @@ namespace marblesApi.Models
             MarbleList.Add(Red);
             return MarbleList;
         }
+
+        public override string ToString()
+        {
+            return $"Marble {Id} is the color {Color}";
+        }
     }
 }

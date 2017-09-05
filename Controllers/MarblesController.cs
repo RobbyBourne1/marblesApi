@@ -52,7 +52,7 @@ namespace marblesApi.Controllers
             List<MarblesModel> MarbleBag = Marbles.MarbleBag();
             var newMarble = new MarblesModel
             {
-                Id = id++, 
+                Id = MarbleBag.Count()+1, 
                 Color = color
             };
 
