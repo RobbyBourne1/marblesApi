@@ -46,7 +46,7 @@ namespace marblesApi.Controllers
 
         // POST api/values
         [HttpPost]
-        public IActionResult Post([FromBody]int id, string color)
+        public IActionResult Post([FromForm]int id, string color)
         {
             var Marbles = new MarblesModel();
             List<MarblesModel> MarbleBag = Marbles.MarbleBag();
@@ -57,7 +57,8 @@ namespace marblesApi.Controllers
             };
 
             MarbleBag.Add(newMarble);
-            return RedirectToPage("/api/Marbles");
+            Console.WriteLine(newMarble);
+            return RedirectToAction("Get");
         }
 
         // PUT api/values/5
